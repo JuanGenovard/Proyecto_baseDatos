@@ -8,13 +8,15 @@ module.exports = {
       id_pelicula: 1,
       titulo:'Jesu Castaña',
       genero:'western',
-      classificacion: 5
+      classificacion: 5,
+      idArticulo: 11
       },
       {
       id_pelicula: 2,
       titulo: 'El ataque de los tomates asesinos',
       genero: 'terror',
-      classificacion: 5
+      classificacion: 5,
+      idArticulo: 12
       }
     ],{})
   },

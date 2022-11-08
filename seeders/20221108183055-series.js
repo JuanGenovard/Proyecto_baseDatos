@@ -8,13 +8,15 @@ module.exports = {
        id_serie: 1,
        titulo:'Jesu Castaña',
        genero:'western',
-       classificacion: 5
+       classificacion: 5,
+       idArticulo: 1
       },
       {
        id_serie: 2,
        titulo:'Joan Macarra',
        genero:'x',
-       classificacion: 5
+       classificacion: 5,
+       idArticulo: 2
       },
     ],{})
   },
