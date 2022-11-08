@@ -12,17 +12,23 @@ module.exports = {
       nombre: {
         type: Sequelize.STRING
       },
-      dni: {
+      email: {
         type: Sequelize.STRING
       },
-      createdAt: {
-        allowNull: false,
+      contraseña: {
+        type: Sequelize.STRING
+      },
+      fecha_nacimiento: {
         type: Sequelize.DATE
       },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
+      // createdAt: {
+      //   allowNull: false,
+      //   type: Sequelize.DATE
+      // },
+      // updatedAt: {
+      //   allowNull: false,
+      //   type: Sequelize.DATE
+      // },
       idRol: {
         type: Sequelize.INTEGER,
         references: {

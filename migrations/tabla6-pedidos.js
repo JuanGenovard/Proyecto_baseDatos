@@ -15,14 +15,14 @@ module.exports = {
       fecha_devolucion: {
         type: Sequelize.DATEONLY
       },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
+      // createdAt: {
+      //   allowNull: false,
+      //   type: Sequelize.DATE
+      // },
+      // updatedAt: {
+      //   allowNull: false,
+      //   type: Sequelize.DATE
+      // },
       idUsuario: {
         type: Sequelize.INTEGER,
         references: {
