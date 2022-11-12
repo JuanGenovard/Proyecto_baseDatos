@@ -1,4 +1,7 @@
 'use strict';
+
+const sequelize = require('../db/db');
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -18,6 +21,9 @@ module.exports = {
       classificacion: {
         type: Sequelize.INTEGER
       },
+      // capitulo: {
+      //   type: Sequelize.BOOLEAN
+      // },
       // createdAt: {
       //   allowNull: false,
       //   type: Sequelize.DATE

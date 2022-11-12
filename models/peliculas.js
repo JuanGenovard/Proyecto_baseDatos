@@ -1,8 +1,7 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
+const {DataTypes, Model} = require('sequelize');
+const sequelize = require ("../db/db.js")
+// module.exports = (sequelize, DataTypes) => {
   class Peliculas extends Model {
     /**
      * Helper method for defining associations.
@@ -10,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
       static associate(models) {
-       peliculas.belongsTo(models.articulos, {foreignkey: 'id'})
+       Peliculas.belongsTo(models.articulos, {foreignkey: 'id'})
     }
   }
   Peliculas.init({
@@ -20,12 +19,14 @@ module.exports = (sequelize, DataTypes) => {
        autoIncrement: true,
        allowNull: false
      },
-    nombre: DataTypes.STRING,
+    titulo: DataTypes.STRING,
     genero: DataTypes.STRING,
     classificacion: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Peliculas',
   });
-  return Peliculas;
-};
+
+// };
+
+module.exports = Peliculas

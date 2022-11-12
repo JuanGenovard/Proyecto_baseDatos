@@ -1,12 +1,12 @@
 
-const Series = require('../models/series')
+const Peliculas = require('../models/peliculas')
 
-const seriesController = {}
+const peliculasController = {}
 
 
-seriesController.getAllSeries = async (req, res) => {
+peliculasController.getAllPeliculas = async (req, res) => {
     try {
-        let resp = await Series.findAll({ attributes: {exclude: ['createdAt', 'updatedAt']}
+        let resp = await Peliculas.findAll({ attributes: {exclude: ['createdAt', 'updatedAt']}
         })
             .then(resp => {
                 res.send(resp)
@@ -16,9 +16,9 @@ seriesController.getAllSeries = async (req, res) => {
     }
 }
 
-seriesController.getTopSeries = async (req, res) => {
+peliculasController.getTopPeliculas = async (req, res) => {
     try {
-        let resp = await Series.findAll({ attributes: {exclude:['createdAt', 'updatedAt']},
+        let resp = await Peliculas.findAll({ attributes: {exclude:['createdAt', 'updatedAt']},
             order: [["Classificacion", "DESC"]],
             limit: 1
         })
@@ -30,10 +30,10 @@ seriesController.getTopSeries = async (req, res) => {
     }
 }
 
-seriesController.getSerieById = async (req, res) => {
+peliculasController.getPeliculasById = async (req, res) => {
     try {
         let id = req.params.id
-        let resp = await Series.findOne({ attributes: {exclude:['createdAt', 'updatedAt']},
+        let resp = await Peliculas.findOne({
             where: {id_serie: id}
         })
             .then(resp => {
@@ -44,10 +44,10 @@ seriesController.getSerieById = async (req, res) => {
     }
 }
 
-seriesController.getSerieByTitle = async (req, res) => {
+peliculasController.getPeliculasByTitle = async (req, res) => {
     try {
         let titulo = req.params.titulo
-        let resp = await Series.findOne({ attributes: {exclude:['createdAt', 'updatedAt']},
+        let resp = await Peliculas.findOne({
             where: {titulo: titulo}
         })
             .then(resp => {
@@ -58,10 +58,10 @@ seriesController.getSerieByTitle = async (req, res) => {
     }
 }
 
-// seriesController.getUpcomingSeries = async (req, res) => {
+// peliculasController.getUpcomingPeliculas = async (req, res) => {
 //     try {
-//         Series.findAll({ attributes: {exclude:['createdAt', 'updateAt']},
-//             where: {capitulo: true}
+//         Serie.findAll({
+//             where: {chapter: true}
 //         })
 //             .then(resp => {
 //                 res.send(resp)
@@ -71,7 +71,7 @@ seriesController.getSerieByTitle = async (req, res) => {
 //     }
 // }
 
-// SeriesController.getSeriesOnTheater = async (req, res) => {
+// peliculasController.getPeliculasOnTheater = async (req, res) => {
 //     try {
 //         Serie.findAll({
 //             where: {theater: true}
@@ -84,4 +84,4 @@ seriesController.getSerieByTitle = async (req, res) => {
 //     }
 // }
 
-module.exports = seriesController
+module.exports = peliculasController

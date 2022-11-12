@@ -8,7 +8,7 @@ module.exports = {
       id_pelicula: 1,
       titulo:'Jesu Castaña',
       genero:'western',
-      classificacion: 5,
+      classificacion: 8,
       idArticulo: 11
       },
       {

@@ -9,6 +9,7 @@ module.exports = {
        titulo:'Jesu Castaña',
        genero:'western',
        classificacion: 8,
+      //  capitulo: true,
        idArticulo: 1
       },
       {
@@ -16,6 +17,7 @@ module.exports = {
        titulo:'Joan Macarra',
        genero:'x',
        classificacion: 5,
+      //  capitulo: false,
        idArticulo: 2
       },
     ],{})
