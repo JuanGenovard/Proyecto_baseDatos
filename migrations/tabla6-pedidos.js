@@ -15,6 +15,12 @@ module.exports = {
       fecha_devolucion: {
         type: Sequelize.DATEONLY
       },
+      EmailUsuario: {
+        type: Sequelize.STRING
+      },
+      id_articulo: {
+        type: Sequelize.INTEGER
+      },
       // createdAt: {
       //   allowNull: false,
       //   type: Sequelize.DATE

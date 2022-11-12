@@ -22,7 +22,9 @@ module.exports = (sequelize, DataTypes) => {
        allowNull: false
      },
     fecha_pedido: DataTypes.DATEONLY,
-    fecha_devolucion: DataTypes.DATEONLY
+    fecha_devolucion: DataTypes.DATEONLY,
+    EmailUsuario: DataTypes.STRING,
+    id_articulo: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Pedidos',
