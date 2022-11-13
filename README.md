@@ -44,6 +44,8 @@ Crear registros:
 
  sequelize db:seed:all
 
+ # Relacion entre tablas.
+
 
 
 
