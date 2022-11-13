@@ -24,6 +24,9 @@ module.exports = {
       capitulo: {
         type: Sequelize.BOOLEAN
       },
+      cines: {
+        type: Sequelize.BOOLEAN
+      },
       createdAt: {
         default:"2008-10-03 22:59:52",
         type: Sequelize.DATE

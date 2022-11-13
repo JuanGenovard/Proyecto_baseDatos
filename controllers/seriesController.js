@@ -71,17 +71,17 @@ seriesController.getUpComingSeries = async (req, res) => {
     }
 }
 
-// SeriesController.getSeriesOnTheater = async (req, res) => {
-//     try {
-//         Serie.findAll({
-//             where: {theater: true}
-//         })
-//             .then(resp => {
-//                 res.send(resp)
-//             })
-//     } catch (err) {
-//         res.send(err)
-//     }
-// }
+seriesController.getSeriesEnCines = async (req, res) => {
+    try {
+        Series.findAll({
+            where: {Cines: true}
+        })
+            .then(resp => {
+                res.send(resp)
+            })
+    } catch (err) {
+        res.send(err)
+    }
+}
 
 module.exports = seriesController

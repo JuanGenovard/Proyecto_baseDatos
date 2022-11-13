@@ -10,6 +10,7 @@ module.exports = {
        genero:'Ciencia ficción',
        classificacion: 5,
        capitulo: false,
+       cines: false,
        idArticulo: 1
       },
       {
@@ -18,6 +19,7 @@ module.exports = {
        genero:'Drama',
        classificacion: 3,
        capitulo: false,
+       cines: false,
        idArticulo: 2
       },
       {
@@ -26,6 +28,7 @@ module.exports = {
        genero:'Ciencia ficción',
        classificacion: 10,
        capitulo: true,
+       cines: false,
        idArticulo: 3
       },
       {
@@ -34,6 +37,7 @@ module.exports = {
        genero:'Drama historico',
        classificacion: 6,
        capitulo: false,
+       cines: true,
        idArticulo: 4
       },
       {
@@ -42,6 +46,7 @@ module.exports = {
        genero:'Ciencia ficción',
        classificacion: 8,
        capitulo: true,
+       cines: false,
        idArticulo: 5
       },
       {
@@ -50,6 +55,7 @@ module.exports = {
        genero:'Terror',
        classificacion: 6,
        capitulo: false,
+       cines: true,
        idArticulo: 6
       },
       {
@@ -58,6 +64,7 @@ module.exports = {
        genero:'Comedia',
        classificacion: 5,
        capitulo: false,
+       cines: false,
        idArticulo: 7
       },
       {
@@ -66,6 +73,7 @@ module.exports = {
        genero:'Drama',
        classificacion: 5,
        capitulo: false,
+       cines: false,
        idArticulo: 8
       },
       {
@@ -74,6 +82,7 @@ module.exports = {
        genero:'Ciencia ficción',
        classificacion: 3,
        capitulo: false,
+       cines: true,
        idArticulo: 9
       },
       {
@@ -82,6 +91,7 @@ module.exports = {
        genero:'Animación',
        classificacion: 9,
        capitulo: true,
+       cines: false,
        idArticulo: 10
       },
     ],{})

@@ -19,6 +19,6 @@ router.get('/titulo/:titulo', seriesController.getSerieByTitle)
 router.get('/upcoming' , seriesController.getUpComingSeries)
 
 // // CRUD READ series que están en el teatro
-// router.get('/ontheater' , seriesController.getSeriesOnTheater)
+router.get('/cines' , seriesController.getSeriesEnCines)
 
 module.exports = router
