@@ -2,6 +2,8 @@
 
  Aquí os presento mi proyecto para esta semana en el que hemos realizado un base de datos utilizando las siguientes herramientas:
 
+ # Herramientas
+
 -JAVASCRIPT
 -NODE
 -NODEMON
@@ -9,6 +11,8 @@
 -SEQUELIZE
 -EXPRESS JS
 -POSTMAN
+
+# Descripción
 
 En este proyecto se nos ha pedido que hagamos una base de datos y que las tablas tengan relación entre sí, cosa que he ido comprobando en el "workbench".
 
@@ -41,7 +45,8 @@ Crear registros:
  sequelize db:seed:all
 
 
-![Tablas relacionadas](../../Tablas.png)
 
 
-Autor: Juan Genovard Caballero.
+# Autor:
+
+ Juan Genovard Caballero.
