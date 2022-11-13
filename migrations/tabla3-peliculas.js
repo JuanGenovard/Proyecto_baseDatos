@@ -18,14 +18,14 @@ module.exports = {
       classificacion: {
         type: Sequelize.INTEGER
       },
-      // createdAt: {
-      //   allowNull: false,
-      //   type: Sequelize.DATE
-      // },
-      // updatedAt: {
-      //   allowNull: false,
-      //   type: Sequelize.DATE
-      // },
+      createdAt: {
+        default:"2008-10-03 22:59:52",
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        default:"2008-10-03 22:59:52",
+        type: Sequelize.DATE
+      },
       idArticulo: {
         type: Sequelize.INTEGER,
         references: {

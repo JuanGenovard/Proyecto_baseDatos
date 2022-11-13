@@ -58,18 +58,18 @@ seriesController.getSerieByTitle = async (req, res) => {
     }
 }
 
-// seriesController.getUpcomingSeries = async (req, res) => {
-//     try {
-//         Series.findAll({ attributes: {exclude:['createdAt', 'updateAt']},
-//             where: {capitulo: true}
-//         })
-//             .then(resp => {
-//                 res.send(resp)
-//             })
-//     } catch (err) {
-//         res.send(err)
-//     }
-// }
+seriesController.getUpComingSeries = async (req, res) => {
+    try {
+        Series.findAll({ attributes: {exclude:['createdAt', 'updatedAt']},
+            where: {capitulo: true}
+        })
+            .then(resp => {
+                res.send(resp)
+            })
+    } catch (err) {
+        res.send(err)
+    }
+}
 
 // SeriesController.getSeriesOnTheater = async (req, res) => {
 //     try {

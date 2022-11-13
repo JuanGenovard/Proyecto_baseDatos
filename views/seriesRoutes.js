@@ -16,7 +16,7 @@ router.get('/id/:id', seriesController.getSerieById)
 router.get('/titulo/:titulo', seriesController.getSerieByTitle)
 
 // // CRUD READ series que estrenan en <7 días
-// router.get('/upcoming' , seriesController.getUpcomingSeries)
+router.get('/upcoming' , seriesController.getUpComingSeries)
 
 // // CRUD READ series que están en el teatro
 // router.get('/ontheater' , seriesController.getSeriesOnTheater)

@@ -27,8 +27,6 @@ const sequelize = require ("../db/db.js")
     sequelize,
     modelName: 'Series',
   });
-  // return Series;
-// };
 
 module.exports = Series
 

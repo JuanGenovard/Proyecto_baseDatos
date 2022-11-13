@@ -58,30 +58,5 @@ peliculasController.getPeliculasByTitle = async (req, res) => {
     }
 }
 
-// peliculasController.getUpcomingPeliculas = async (req, res) => {
-//     try {
-//         Serie.findAll({
-//             where: {chapter: true}
-//         })
-//             .then(resp => {
-//                 res.send(resp)
-//             })
-//     } catch (err) {
-//         res.send(err)
-//     }
-// }
-
-// peliculasController.getPeliculasOnTheater = async (req, res) => {
-//     try {
-//         Serie.findAll({
-//             where: {theater: true}
-//         })
-//             .then(resp => {
-//                 res.send(resp)
-//             })
-//     } catch (err) {
-//         res.send(err)
-//     }
-// }
 
 module.exports = peliculasController

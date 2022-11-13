@@ -21,14 +21,14 @@ module.exports = {
       id_articulo: {
         type: Sequelize.INTEGER
       },
-      // createdAt: {
-      //   allowNull: false,
-      //   type: Sequelize.DATE
-      // },
-      // updatedAt: {
-      //   allowNull: false,
-      //   type: Sequelize.DATE
-      // },
+      createdAt: {
+        default:"2008-10-03 22:59:52",
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        default:"2008-10-03 22:59:52",
+        type: Sequelize.DATE
+      },
       idUsuario: {
         type: Sequelize.INTEGER,
         references: {

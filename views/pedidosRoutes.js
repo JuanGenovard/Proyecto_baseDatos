@@ -1,20 +1,20 @@
-// const express = require("express");
-// const router = express.Router();
+const express = require("express");
+const router = express.Router();
 
 // // const { isValidRoleAdmin, authBearerMiddleware, isValidUser } = require("../middlewares/authMiddleware")
 
-// const OrderController = require('../controllers/OrderControllers')
+const pedidosController = require('../controllers/pedidosController')
 
 // // // CRUD READ Orders de un user
-// router.get('/:mail', authBearerMiddleware, isValidUser, OrderController.getOrdersFromUser)
+router.get('/id/:id', pedidosController.getPedidosById)
 
 // // // CRUD READ all Order - solo el admin
-// // router.get('/', authBearerMiddleware, isValidRoleAdmin, OrderController.getAllOrders)
+router.get('/', pedidosController.getAllPedidos)
 
 // // // CRUD CREATE Order
-// // router.post('/neworder',authBearerMiddleware, isValidRoleAdmin, OrderController.postNewOrder)
+router.post('/nuevopedido', pedidosController.postNuevoPedido)
 
 // // // CRUD Update Order
-// // router.put('/update/:id_order',authBearerMiddleware, isValidRoleAdmin, OrderController.updateOrderById)
+router.put('/update/:id_pedido', pedidosController.updatePedidosById)
 
-// module.exports = router
+module.exports = router
