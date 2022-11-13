@@ -29,7 +29,7 @@ module.exports = {
       //   allowNull: false,
       //   type: Sequelize.DATE
       // },
-      idRol: {
+      id_Rol: {
         type: Sequelize.INTEGER,
         references: {
           model: "roles",

@@ -21,9 +21,9 @@ module.exports = {
       classificacion: {
         type: Sequelize.INTEGER
       },
-      // capitulo: {
-      //   type: Sequelize.BOOLEAN
-      // },
+      capitulo: {
+        type: Sequelize.BOOLEAN
+      },
       // createdAt: {
       //   allowNull: false,
       //   type: Sequelize.DATE

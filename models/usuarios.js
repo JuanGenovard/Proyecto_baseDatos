@@ -23,7 +23,8 @@ const sequelize = require ("../db/db.js")
     email: DataTypes.STRING,
     fecha_nacimiento: DataTypes.DATE,
     contraseña: DataTypes.STRING,
-    nombre: DataTypes.STRING
+    nombre: DataTypes.STRING,
+    id_rol: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Usuarios',

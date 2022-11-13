@@ -21,7 +21,7 @@ const sequelize = require ("../db/db.js")
      },
     titulo: DataTypes.STRING,
     genero: DataTypes.STRING,
-    classificacion: DataTypes.INTEGER
+    classificacion: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Peliculas',

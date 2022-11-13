@@ -14,4 +14,18 @@ usuariosController.getAllusuarios = async (req, res) => {
     }
 }
 
+usuariosController.getUsuariosById = async (req, res) => {
+    try {
+        let id = req.params.id
+        let resp = await usuarios.findOne({ attributes: {exclude:['createdAt', 'updatedAt']},
+            where: {id_usuario: id}
+        })
+            .then(resp => {
+                res.send(resp)
+            })
+    } catch (err) {
+        res.send(err)
+    }
+}
+
 module.exports = usuariosController

@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
+
 // const { isValidRoleAdmin, authBearerMiddleware, isValidusuarios } = require("../middlewares/authMiddleware")
 
 const usuariosController = require('../controllers/usuariosController')
@@ -9,7 +10,7 @@ const usuariosController = require('../controllers/usuariosController')
 router.get('/', usuariosController.getAllusuarios)
 
 // // CRUD READ usuarios
-// router.get('/id/:mail', authBearerMiddleware, isValidusuarios, usuariosController.getusuariosById)
+router.get('/id/:id', usuariosController.getUsuariosById)
 
 // // CRUD Update usuarios
 // router.put('/update/:mail', authBearerMiddleware, isValidusuarios, usuariosController.updateusuariosById)

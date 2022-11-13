@@ -22,7 +22,7 @@ const sequelize = require ("../db/db.js")
     titulo: DataTypes.STRING,
     genero: DataTypes.STRING,
     classificacion: DataTypes.INTEGER,
-    // capitulo: DataTypes.BOOLEAN
+    capitulo: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Series',
