@@ -43,6 +43,8 @@ Crear tablas:
 Crear registros:
 
  sequelize db:seed:all
+ 
+ # Relacion entre tablas
 
 ![Tablas](https://user-images.githubusercontent.com/114061110/201538933-48aa1fec-6656-4436-9c2c-eb2c4a6fbd13.png)
 
