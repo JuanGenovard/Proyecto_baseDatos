@@ -2,8 +2,6 @@ const express = require("express");
 const router = express.Router();
 
 
-// const { isValidRoleAdmin, authBearerMiddleware, isValidusuarios } = require("../middlewares/authMiddleware")
-
 const usuariosController = require('../controllers/usuariosController')
 
 // CRUD READ all usuarioss
@@ -21,6 +19,3 @@ router.put('/update/:mail', usuariosController.updateUsuarioById)
 router.delete('/delete/:mail', usuariosController.deleteUsuarioById)
 
 module.exports = router
-
-// // CRUD CREATE usuarios
-// router.post('/register' , usuariosController.postNewusuarios)

@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express.Router();
 
-// // const { isValidRoleAdmin, authBearerMiddleware, isValidUser } = require("../middlewares/authMiddleware")
-
 const pedidosController = require('../controllers/pedidosController')
 
 // // // CRUD READ Orders de un user

@@ -17,10 +17,5 @@ router.get('/titulo', peliculasController.getPeliculasByTitle)
 
 router.get('/genero/:genero' , peliculasController.getPeliculasByGenero)
 
-// // CRUD READ Peliculas que estrenan en <7 días
-// router.get('/upcoming' , peliculasController.getUpcomingPeliculas)
-
-// // CRUD READ Peliculas que están en el teatro
-// router.get('/ontheater' , peliculasController.getPeliculasOnTheater)
 
 module.exports = router
