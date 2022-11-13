@@ -15,6 +15,8 @@ router.get('/id', peliculasController.getPeliculasById)
 // // CRUD READ Peliculas por titulo
 router.get('/titulo', peliculasController.getPeliculasByTitle)
 
+router.get('/genero/:genero' , peliculasController.getPeliculasByGenero)
+
 // // CRUD READ Peliculas que estrenan en <7 días
 // router.get('/upcoming' , peliculasController.getUpcomingPeliculas)
 

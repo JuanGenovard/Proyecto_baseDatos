@@ -1,20 +1,21 @@
 # Proyecto_baseDatos
 
-Ejercicio técnico backend, aplicación alquiler de películas.
+ Aquí os presento mi proyecto para esta semana en el que hemos realizado un base de datos utilizando las siguientes herramientas:
 
-Datos generales
-- Autor del proyecto: Juan Genovard Caballero - Título del proyecto: Proyecto base de datos - Back Películas, alquiler - Fecha: 06/11/2022
+-JAVASCRIPT
+-NODE
+-NODEMON
+-SQL
+-SEQUELIZE
+-EXPRESS JS
+-POSTMAN
 
-Tecnologías y dependencias:
-JAVASCRIPT
-NODE
-NODEMON
-SQL
-SEQUELIZE
-EXPRESS JS
-POSTMAN
-Descripción general del proyecto
-El siguiente ejercicio consiste en el diseño y desarrollo de un backend para un servicio de alquiler de películas. La base de datos para esta aplicación es relacional (SQL) y permite la relación entre las tablas.
+En este proyecto se nos ha pedido que hagamos una base de datos y que las tablas tengan relación entre sí, cosa que he ido comprobando en el "workbench".
+
+Lo primero que he hecho es crear una modelo para cada tabla, de este modo, al crear las tablas sabremos que parámetros necesitamos.
+A continuación he generado otra tabla con las mismas características la cual va a ser migrada a la base de datos y la que nos servirá de guía para hacer los "seeaders".
+En la tercera tabla he utilizado las características de las dos tablas anteriores para darle los parámetros correspondientes.
+Y para finalizar he creado los "endpoinds" necesarios que requería el proyecto.
 
 Requisitos previos y funcionamiento
 El primer paso para poner en funcionamiento el proyecto es clonarlo en nuestro local, siempre con el NODE instalado.
@@ -38,3 +39,9 @@ Crear tablas:
 Crear registros:
 
  sequelize db:seed:all
+
+
+![Tablas relacionadas](../../Tablas.png)
+
+
+Autor: Juan Genovard Caballero.

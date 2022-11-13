@@ -58,5 +58,19 @@ peliculasController.getPeliculasByTitle = async (req, res) => {
     }
 }
 
+peliculasController.getPeliculasByGenero = async (req, res) => {
+    try {
+        let genero = req.params.genero
+        let resp = await Peliculas.findAll({
+            where: {genero: genero}
+        })
+            .then(resp => {
+                res.send(resp)
+            })
+    } catch (err) {
+        res.send(err)
+    }
+}
+
 
 module.exports = peliculasController
