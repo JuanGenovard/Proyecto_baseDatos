@@ -1,5 +1,7 @@
 const usuarios = require('../models/usuarios')
 
+
+
 const usuariosController = {};
 
 usuariosController.getAllUsuarios = async (req, res) => {
