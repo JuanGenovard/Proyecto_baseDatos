@@ -51,6 +51,8 @@ sequelize db:seed:undo:all
 
 Register
 POST - localhost:3002/auth/nuevousuario - { "nombre": "Miguel", "email": "Miguel@email.com",  "contraseña": "contraseña" }
+En caso de querer loguear posteriormente un usuario adim para que pueda realizar ciertas consultas, introducir en el body:
+{ "nombre": "Miguel", "email": "Miguel@email.com",  "contraseña": "contraseña", "id_rol": 1 }
 
 Login
 POST - localhost:3002/auth/login - { "email": "Miguel@email.com",  "contraseña": "contraseña" }

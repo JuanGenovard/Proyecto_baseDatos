@@ -2,27 +2,27 @@ const { isValidUsuariosAndContraseñas } = require("../services/authServices");
 const jsonwebtoken = require("jsonwebtoken");
 const Usuarios = require("../models/Usuarios")
 
-const authBasicMiddleware = async (req, res, next) => {
-  const { authorization } = req.headers;
-  let isAuthorized = false;
-  const [type, token] = authorization.split(" ");
-  if (type !== "basic") {
-    res.status(401).json({ message: "No se ha podido autentificar" });
-    return;
-  }
-  const UsuariosAndPass = atob(token);
-  const [Usuarios, Contraseñas] = UsuariosAndPass.split(":");
+// const authBasicMiddleware = async (req, res, next) => {
+//   const { authorization } = req.headers;
+//   let isAuthorized = false;
+//   const [type, token] = authorization.split(" ");
+//   if (type !== "basic") {
+//     res.status(401).json({ message: "No se ha podido autentificar" });
+//     return;
+//   }
+//   const UsuariosAndPass = atob(token);
+//   const [Usuarios, Contraseñas] = UsuariosAndPass.split(":");
 
-  if (await isValidUsuariosAndContraseñas(Usuarios, Contraseñas)) {
-    isAuthorized = true;
-  }
+//   if (await isValidUsuariosAndContraseñas(Usuarios, Contraseñas)) {
+//     isAuthorized = true;
+//   }
 
-  if (isAuthorized) {
-    next();
-  } else {
-    res.status(401).json({ message: "No se ha podido autentificar" });
-  }
-};
+//   if (isAuthorized) {
+//     next();
+//   } else {
+//     res.status(401).json({ message: "No se ha podido autentificar" });
+//   }
+// };
 
 const authBearerMiddleware = async (req, res, next) => {
   const { authorization } = req.headers;
@@ -72,27 +72,5 @@ const isValidRolAdmin = (req, res, next) => {
   }
 }
 
-const isValidRol = (rol) => (req, res, next) => {
-  if (req.auth?.rol === rol) {
-    next();
-  } else {
-    res.status(403).json({ message: "No se ha podido autentificar" });
-  }
-}
 
-const isValidUsuarios = async (req, res, next) => {
-  const { authorization } = req.headers;
-  const [strategy, jwt] = authorization.split(" ");
-  const payload = jsonwebtoken.verify(jwt, process.env.JWT_SECRET || "tomatesasesinos");
-  let id = req.params.id
-  console.log(req.params.id)
-
-  console.log("payloadid", payload.id)
-  if (payload.id === id) {
-    next();
-  } else {
-    res.status(403).json({ message: "No se ha podido autentificar" });
-  }
-}
-
-module.exports = { authBasicMiddleware, authBearerMiddleware, isValidRolAdmin, isValidRol, isValidUsuarios };
+module.exports = { authBearerMiddleware, isValidRolAdmin };
