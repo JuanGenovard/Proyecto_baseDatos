@@ -10,11 +10,11 @@ const usuariosController = require('../controllers/usuariosController')
 router.get('/',authBearerMiddleware, isValidRolAdmin, usuariosController.getAllUsuarios)
 
 // // CRUD READ usuarios
-router.get('/id/:id',authBearerMiddleware, isValidUsuarios, usuariosController.getUsuariosById)
+router.get('/id/:id', usuariosController.getUsuariosById)
 
 
 // // CRUD Update usuarios
-router.put('/update/:email',authBearerMiddleware, isValidUsuarios, usuariosController.updateUsuarioById)
+router.put('/update/:email', usuariosController.updateUsuarioById)
 
 // // CRUD delete usuarios - solo el admin
 router.delete('/delete/:email',authBearerMiddleware, isValidRolAdmin, usuariosController.deleteUsuarioById)

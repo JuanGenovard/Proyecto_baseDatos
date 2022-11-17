@@ -21,28 +21,56 @@ A continuación he generado otra tabla con las mismas características la cual v
 En la tercera tabla he utilizado las características de las dos tablas anteriores para darle los parámetros correspondientes.
 Y para finalizar he creado los "endpoinds" necesarios que requería el proyecto.
 
-Requisitos previos y funcionamiento
+# Requisitos previos y funcionamiento
+
 El primer paso para poner en funcionamiento el proyecto es clonarlo en nuestro local, siempre con el NODE instalado.
 
  git clone 'url-del-repositorio'
 El segundo paso es instalar las dependencias con el siguiente comando:
 
- npm install
-Por último, arrancamos el servidor utilizando:
+npm init
+npm install
+npm update
+npm run dev
+npm run start
 
- npm run dev
-Creación Base de Datos
-Introducimos nuestros datos en el archivo /config/config.json (servidor SQL, user, password, database and host) Luego, ejecutamos lo siguiente:
+npm install cors jsonwebtoken bcrypt
+sequelize model:generate --name user --attributes name:string, password:string, email:string
+sequelize db:create
+sequelize db:migrate
 
-Crear base de datos:
+sequelize db:migrate:undo
+sequelize db:migrate:undo:all
 
- sequelize db:create
-Crear tablas:
+sequelize seed:generate --name demo-user
+sequelize db:seed:all
+sequelize db:seed:undo
+sequelize db:seed:undo:all
 
- sequelize db:migrate
-Crear registros:
+# End-points
 
- sequelize db:seed:all
+Register
+POST - localhost:3002/auth/nuevousuario - { "nombre": "Miguel", "email": "Miguel@email.com",  "contraseña": "contraseña" }
+
+Login
+POST - localhost:3002/auth/login - { "email": "Miguel@email.com",  "contraseña": "contraseña" }
+
+Home
+GET - localhost:3002
+
+Movies
+GET - localhost:3002/Peliculas/
+GET - localhost:3002/Peliculas/id/:id
+GET - localhost:3002/Peliculas/titulo/:titulo
+GET - localhost:3002/Peliculas/genero/:genero
+
+Series
+GET - localhost:3002/Series/
+GET - localhost:3002/Series/topseries
+GET - localhost:3002/Series/titulo/:titulo
+GET - localhost:3002/Series/upcoming
+GET - localhost:3002/Series/cines
+
  
  # Relacion entre tablas
 

@@ -10,10 +10,10 @@ router.get('/', peliculasController.getAllPeliculas)
 router.get('/topPeliculas', peliculasController.getTopPeliculas)
 
 // // CRUD READ Peliculas por id
-router.get('/id', peliculasController.getPeliculasById)
+router.get('/id/:id', peliculasController.getPeliculasById)
 
 // // CRUD READ Peliculas por titulo
-router.get('/titulo', peliculasController.getPeliculasByTitle)
+router.get('/titulo/:titulo', peliculasController.getPeliculasByTitle)
 
 router.get('/genero/:genero' , peliculasController.getPeliculasByGenero)
 
