@@ -1,6 +1,6 @@
 # Proyecto_baseDatos
 
- Aquí os presento mi proyecto para esta semana en el que hemos realizado un base de datos utilizando las siguientes herramientas:
+ Aquí os presento mi proyecto para esta semana en el que hemos realizado una base de datos utilizando las siguientes herramientas:
 
  # Herramientas
 
@@ -43,9 +43,10 @@ Crear tablas:
 Crear registros:
 
  sequelize db:seed:all
+ 
+ # Relacion entre tablas
 
- # Relacion entre tablas.
-
+![Tablas](https://user-images.githubusercontent.com/114061110/201538933-48aa1fec-6656-4436-9c2c-eb2c4a6fbd13.png)
 
 
 
