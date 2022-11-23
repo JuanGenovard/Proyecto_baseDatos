@@ -1,0 +1,20 @@
+version: '3'
+services:
+  bbdd:
+    image: mysql
+    ports:
+    - 3306:3306
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+
+  # backend:
+  #   image: node
+  #   ports:
+  #     - 3000:3001
+  #   working_dir: /app
+  #   volumes:
+  #     - ./:/app
+  #   command: npm run dev
+

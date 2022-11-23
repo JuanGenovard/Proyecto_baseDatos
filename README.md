@@ -1,6 +1,10 @@
 # Proyecto_baseDatos
 
  Aquí os presento mi proyecto para esta semana en el que hemos realizado una base de datos utilizando las siguientes herramientas:
+ 
+ # Inicializar servicio mysql
+
+ docker compose up -d
 
  # Herramientas
 
