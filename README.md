@@ -55,8 +55,12 @@ sequelize db:seed:undo:all
 # End-points
 
 Register
-POST - localhost:3002/auth/nuevousuario - { "nombre": "Miguel", "email": "Miguel@email.com",  "contraseña": "contraseña" }
+POST - localhost:3002/auth/nuevousuario - 
+
+{ "nombre": "Miguel", "email": "Miguel@email.com",  "contraseña": "contraseña" }
+
 En caso de querer loguear posteriormente un usuario adim para que pueda realizar ciertas consultas, introducir en el body:
+
 { "nombre": "Miguel", "email": "Miguel@email.com",  "contraseña": "contraseña", "id_rol": 1 }
 
 Login
@@ -88,6 +92,26 @@ GET - localhost:3002/Series/titulo/:titulo
 GET - localhost:3002/Series/upcoming
 
 GET - localhost:3002/Series/cines
+
+Pedidos
+
+get - localhost:3002/Pedidos/id/:email
+
+get - localhost:3002/Pedidos/
+
+get - localhost:3002/Pedidos/nuevopedido
+
+get - localhost:3002/Pedidos/update/:id_pedido
+
+Usuarios
+
+Get - localhost:3002/Usuarios/
+
+Get - localhost:3002/Usuarios/id/:email
+
+Get - localhost:3002/Usuarios/update/:email
+
+Get - localhost:3002/Usuarios/delete/:email
 
  
  # Relacion entre tablas
