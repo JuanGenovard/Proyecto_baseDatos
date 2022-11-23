@@ -5,6 +5,7 @@
  # Inicializar servicio mysql
 
  docker compose up -d
+ npm run dev
 
  # Herramientas
 
