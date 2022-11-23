@@ -3,11 +3,16 @@ const usuarios = require('../models/usuarios')
 
 const pedidosController = {};
 
-pedidosController.getPedidosById = async (req, res) => {
+pedidosController.getPedidosByEmail = async (req, res) => {
     try {
-        let id = req.params.id
-        let resp = await Pedidos.findOne({ attributes: {exclude:['createdAt', 'updatedAt']},
-            where: {id_pedido: id}
+        let email = req.params.email
+        let resp = await usuarios.findAll({ attributes: {exclude:['createdAt', 'updatedAt']},
+            where: {email: email},
+            include: {
+                model: Pedidos,
+                attributes: ['id_pedidos', 'fecha_pedido', "fecha_devolucion"]
+            },
+            attributes: ['email', 'nombre']
         })
             .then(resp => {
                 res.send(resp)

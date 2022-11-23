@@ -16,11 +16,11 @@ usuariosController.getAllUsuarios = async (req, res) => {
     }
 }
 
-usuariosController.getUsuariosById = async (req, res) => {
+usuariosController.getUsuariosByEmail = async (req, res) => {
     try {
-        let id = req.params.id
+        let email = req.params.email
         let resp = await usuarios.findOne({ attributes: {exclude:['createdAt', 'updatedAt']},
-            where: {id_usuario: id}
+            where: {email: email}
         })
             .then(resp => {
                 res.send(resp)

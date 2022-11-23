@@ -60,22 +60,33 @@ En caso de querer loguear posteriormente un usuario adim para que pueda realizar
 { "nombre": "Miguel", "email": "Miguel@email.com",  "contraseña": "contraseña", "id_rol": 1 }
 
 Login
+
 POST - localhost:3002/auth/login - { "email": "Miguel@email.com",  "contraseña": "contraseña" }
 
 Home
+
 GET - localhost:3002
 
 Movies
+
 GET - localhost:3002/Peliculas/
+
 GET - localhost:3002/Peliculas/id/:id
+
 GET - localhost:3002/Peliculas/titulo/:titulo
+
 GET - localhost:3002/Peliculas/genero/:genero
 
 Series
+
 GET - localhost:3002/Series/
+
 GET - localhost:3002/Series/topseries
+
 GET - localhost:3002/Series/titulo/:titulo
+
 GET - localhost:3002/Series/upcoming
+
 GET - localhost:3002/Series/cines
 
  

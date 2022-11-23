@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const { isValidRolAdmin, authBearerMiddleware } = require("../middlewares/authMiddleware")
+const { isValidRolAdmin, authBearerMiddleware, isValidUsuario } = require("../middlewares/authMiddleware")
 
 
 const usuariosController = require('../controllers/usuariosController')
@@ -10,11 +10,11 @@ const usuariosController = require('../controllers/usuariosController')
 router.get('/',authBearerMiddleware, isValidRolAdmin, usuariosController.getAllUsuarios)
 
 // // CRUD READ usuarios
-router.get('/id/:id', usuariosController.getUsuariosById)
+router.get('/id/:email', authBearerMiddleware, isValidUsuario, usuariosController.getUsuariosByEmail)
 
 
 // // CRUD Update usuarios
-router.put('/update/:email', usuariosController.updateUsuarioById)
+router.put('/update/:email', authBearerMiddleware, isValidUsuario, usuariosController.updateUsuarioById)
 
 // // CRUD delete usuarios - solo el admin
 router.delete('/delete/:email',authBearerMiddleware, isValidRolAdmin, usuariosController.deleteUsuarioById)
