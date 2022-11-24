@@ -75,6 +75,8 @@ Movies
 
 GET - localhost:3002/Peliculas/
 
+GET - localhost:3002/Peliculas/topPeliculas
+
 GET - localhost:3002/Peliculas/id/:id
 
 GET - localhost:3002/Peliculas/titulo/:titulo
@@ -99,7 +101,9 @@ get - localhost:3002/Pedidos/id/:email
 
 get - localhost:3002/Pedidos/
 
-get - localhost:3002/Pedidos/nuevopedido
+Post - localhost:3002/Pedidos/nuevopedido -
+
+{"fecha_pedido: "2022-10-04","fecha_devolucion: "2022-10-04","EmailUsuario":"JuanG@gmail.com", "id_articulo": "5"}
 
 get - localhost:3002/Pedidos/update/:id_pedido
 
@@ -112,6 +116,8 @@ Get - localhost:3002/Usuarios/id/:email
 Get - localhost:3002/Usuarios/update/:email
 
 Get - localhost:3002/Usuarios/delete/:email
+
+
 
  
  # Relacion entre tablas

@@ -11,6 +11,7 @@ router.get('/id/:email',authBearerMiddleware, isValidUsuario, pedidosController.
 // // // CRUD READ all Order - solo el admin
 router.get('/',authBearerMiddleware, isValidRolAdmin, pedidosController.getAllPedidos)
 
+
 // // // CRUD CREATE Order
 router.post('/nuevopedido',authBearerMiddleware, pedidosController.postNuevoPedido)
 
